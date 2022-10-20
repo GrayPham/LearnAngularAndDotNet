@@ -14,7 +14,7 @@ namespace DatingApp_API.Data
         {
             if (await context.Users.AnyAsync()) return;
 
-            var userData = await System.IO.File.ReadAllTextAsync("Data/UserSeedData.json");
+            var userData = await System.IO.File.ReadAllTextAsync("D:\\CodePratice\\DatingApp_API\\DatingApp_API\\Data\\UserSeedData.json");
             var users = JsonSerializer.Deserialize<List<AppUser>>(userData);
             foreach (var user in users)
             {
